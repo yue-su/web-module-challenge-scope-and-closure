@@ -34,16 +34,14 @@ console.log(processFirstItem(['foo','bar'],callback));
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * counter1 contains one variable and one function in it's function scope; 
- * Counter1 have access to the variable 'count' inside of its scope, whereas counter2 have accss to the variable outside of its scope.
- * 
+ * counter1 contains a private variable and a function in it's function scope; whereas counter2 accsses the variable outside of its scope.
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * counter1 has a closure. When a function is created inside of a function, the inner function is a closure.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- * couter1 is preferred when the private variables is needed. in this case the count as the private variables can store a value that would not be initialized everytime the function is called.
- * couter2 is preferred when the variables are need to be re-initialized everytime the function called.
+ * couter1 is preferred when the private variables is needed. in this case the count as the private variables can store a value and can not be accessed out of its scope.
+ * couter2 is preferred when the variables it manipulates are also needed to be accessed by other functions.
 */
 
 // counter1 code

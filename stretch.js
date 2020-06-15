@@ -23,3 +23,13 @@
   let addSeven = createBase(7);
   addSeven(10);
   addSeven(21);
+
+//   for (var i = 0; i < 3; i++) {
+//     setTimeout(function() { alert(i); }, 1000 + i);
+//   }
+
+// for (var i = 0; i < 3; i++) {
+//     setTimeout(function(j) { 
+//         return alert(j); 
+//       }(i), 1000 + i);
+//   }
