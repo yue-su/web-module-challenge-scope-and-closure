@@ -6,6 +6,15 @@
   console.log("a defined? " + (typeof a !== 'undefined'));
   console.log("b defined? " + (typeof b !== 'undefined'));
 
+/*
+Becasue of hoisting, Javascript will parse the code like below:
+
+var a;    <- declared but not defined;
+a = b;
+b = 3;    <- declared and defined as global variable;  
+
+*/
+
   /*
   Write a function that would allow you to do this using a closure. 
     var addSix = createBase(6);
@@ -33,3 +42,20 @@
 //         return alert(j); 
 //       }(i), 1000 + i);
 //   }
+
+ function createCounter() {
+   let counter = 0;
+   const myFunction = function() {
+     counter += 1
+     return counter
+   }
+   return myFunction
+ }
+ const increment = createCounter()
+    const c1 = increment()
+    const c2 = increment()
+    const c3 = increment()
+    console.log('example increment', c1, c2, c3)
+
+const incrementSec = createCounter()
+    console.log(incrementSec(),incrementSec(),incrementSec())
